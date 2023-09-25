@@ -3,9 +3,9 @@ import './App.scss';
 
 function App() {
   return (
-    <div>
-      <p className="heading">Hello World!</p>
-    </div>
+    <h1 className="text-3xl font-bold heading">
+      Hello world!
+    </h1>
   );
 }
 
