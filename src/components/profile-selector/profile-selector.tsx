@@ -61,8 +61,8 @@ export function ProfileSelector() {
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
         <Command>
-          <CommandInput placeholder="Search framework..." />
-          <CommandEmpty>No framework found.</CommandEmpty>
+          <CommandInput placeholder="Search profiles..." />
+          <CommandEmpty>No profile found.</CommandEmpty>
           <CommandGroup>
             {profiles.map((framework) => (
               <CommandItem
