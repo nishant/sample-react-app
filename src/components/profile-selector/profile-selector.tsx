@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { Check, ChevronsUpDown } from "lucide-react"
-
+import './profile-selector.scss';
 import {
   Command,
   CommandEmpty,
@@ -45,7 +45,7 @@ export function ProfileSelector() {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[200px] justify-between"
+          className="w-[100%] justify-between no-border"
         >
           <Avatar className="w-[32px] h-[32px]">
             <AvatarImage className="profile-icon" src="https://static.thenounproject.com/png/638636-200.png" />
