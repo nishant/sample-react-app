@@ -2,6 +2,7 @@ import React from 'react';
 import './App.scss';
 import ProfileSelector from './components/profile-selector/profile-selector';
 import Sidenav from './components/sidenav/sidenav';
+import ControlBar from './components/control-bar/control-bar';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Sidenav />
       </div>
       <div className="content-container content">
-        world
+        <ControlBar />
       </div>
     </div>
   );
