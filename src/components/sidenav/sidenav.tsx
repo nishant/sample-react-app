@@ -1,17 +1,29 @@
 import React, { useState } from 'react';
-
-// Define a recursive TreeNode component
+import './sidenav.scss';
+import {
+  ChevronDown,
+  ChevronRight,
+  FileStack, MessagesSquare,
+  PieChart,
+  Receipt,
+  Settings,
+  ShoppingBag,
+  UserSquare,
+} from 'lucide-react';
 const TreeNode = ({ node }: any) => {
   const [isExpanded, setIsExpanded] = useState(false);
   
   const toggleExpansion = () => {
-    setIsExpanded(!isExpanded);
+    if (node.children.length > 0) {
+      setIsExpanded(!isExpanded);
+    }
   };
   
   return (
-    <div>
-      <div onClick={toggleExpansion} style={{ cursor: 'pointer' }}>
-        {isExpanded ? '🔽' : '▶️'} {node.name}
+    <div className="item-container">
+      <div className="tree-item" onClick={toggleExpansion}>
+        {isExpanded ? <ChevronDown className="reduce-size" /> : <ChevronRight className="reduce-size" />}
+        {node.icon} {node.name}
       </div>
       {isExpanded && (
         <ul style={{ marginLeft: '20px' }}>
@@ -26,11 +38,10 @@ const TreeNode = ({ node }: any) => {
   );
 };
 
-// Define the Tree component
 const Tree = ({ data }: any) => {
   return (
-    <div>
-      <h2>Tree Component</h2>
+    <div className="tree-container">
+      <h2 className="tree-heading">Voyage</h2>
       <ul>
         {data.map((node: any) => (
           <li key={node.id}>
@@ -42,36 +53,70 @@ const Tree = ({ data }: any) => {
   );
 };
 
-// Example usage of the Tree component
 const Sidenav = () => {
   const treeData = [
     {
       id: 1,
-      name: 'Node 1',
+      name: 'Dashboard',
+      children: [],
+      icon: <PieChart className="icon" />
+    },
+    {
+      id: 2,
+      name: 'History',
+      children: [],
+      icon: <ShoppingBag className="icon" />
+    },
+    {
+      id: 3,
+      name: 'Customers',
+      icon: <UserSquare className="icon" />,
       children: [
         {
-          id: 2,
-          name: 'Node 1.1',
+          id: 4,
+          name: 'Contracts',
           children: [],
+          icon: null
         },
         {
-          id: 3,
-          name: 'Node 1.2',
-          children: [
-            {
-              id: 4,
-              name: 'Node 1.2.1',
-              children: [],
-            },
-          ],
+          id: 5,
+          name: 'Messaging',
+          children: [],
+          icon: null
         },
+        {
+          id: 6,
+          name: 'Contacts',
+          children: [],
+          icon: null
+        }
       ],
     },
     {
-      id: 5,
-      name: 'Node 2',
+      id: 7,
+      name: 'Documents',
       children: [],
+      icon: <FileStack className="icon" />
     },
+    {
+      id: 8,
+      name: 'Billing',
+      children: [],
+      icon: <Receipt className="icon" />
+    },
+    {
+      id: 9,
+      name: 'Settings',
+      children: [],
+      icon: <Settings className="icon" />
+    },
+    {
+      id: 10,
+      name: 'Social',
+      children: [],
+      icon: <MessagesSquare className="icon" />
+    },
+    
   ];
   
   return (

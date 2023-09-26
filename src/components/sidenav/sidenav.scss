@@ -1,0 +1,32 @@
+.tree-container {
+  padding: 16px;
+
+  .tree-item {
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    padding: 4px;
+    border-radius: 4px;
+
+    &:hover {
+      background: #efefef;
+    }
+  }
+}
+
+.tree-heading {
+  font-weight: bold;
+  color: grey;
+  padding-bottom: 8px;
+}
+
+
+.reduce-size {
+  height: 18px;
+  width: 18px;
+}
+
+.icon {
+  padding-right: 8px;
+  padding-bottom: 4px;
+}
