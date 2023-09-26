@@ -32,7 +32,7 @@ const profiles = [
     value: "fraiser crane",
     label: "Fraiser Crane",
   }
-]
+];
 
 export function ProfileSelector() {
   const [open, setOpen] = React.useState(false)
