@@ -2,3 +2,27 @@
   color: blue;
   font-size: 24pt;
 }
+
+#page-container {
+  display: flex;
+  height: 100%;
+
+  & > .content {
+    height: 100%;
+  }
+
+  .sidenav-container {
+    width: 400px;
+    border: 2px solid green;
+    height: 100%;
+  }
+
+  .content-container {
+    border: 2px solid red;
+    width: 100%;
+  }
+
+  * {
+    font-family: "Roboto", sans-serif;
+  }
+}
