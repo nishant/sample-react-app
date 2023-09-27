@@ -15,10 +15,10 @@ const invoices = [
     deliveryDate: 'Sept 18, 2024',
   },
   {
-    requestNum: '',
-    quantity: '',
-    location: '',
-    deliveryDate: '',
+    requestNum: '456765',
+    quantity: '87',
+    location: 'Baltimore, MD',
+    deliveryDate: 'November 12, 2023',
   },
 ]
 

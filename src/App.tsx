@@ -5,6 +5,7 @@ import Sidenav from './components/custom/sidenav';
 import ControlBar from './components/custom/control-bar';
 import RequestsTable from './components/custom/requests-table';
 import Map from './components/custom/map';
+import OfferFilter from './components/custom/offer-filter';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <ControlBar />
         <Map />
         <RequestsTable />
+        <OfferFilter />
       </div>
     </div>
   );
