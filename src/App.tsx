@@ -4,6 +4,7 @@ import ProfileSelector from './components/profile-selector/profile-selector';
 import Sidenav from './components/sidenav/sidenav';
 import ControlBar from './components/control-bar/control-bar';
 import Map from './components/map/map';
+import RequestsTable from './components/requests-table/requests-table';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <div className="content-container content">
         <ControlBar />
         <Map />
+        <RequestsTable />
       </div>
     </div>
   );
