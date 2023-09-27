@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { Check, ChevronsUpDown } from "lucide-react"
-import './profile-selector.scss';
+import './styles/profile-selector.scss';
 import {
   Command,
   CommandEmpty,

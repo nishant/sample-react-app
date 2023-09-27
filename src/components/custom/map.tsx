@@ -1,5 +1,5 @@
-// // @ts-nocheck
-import React, { Component } from 'react';
+// @ts-nocheck
+import React from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useState } from 'react';

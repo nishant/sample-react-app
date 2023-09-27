@@ -1,8 +1,6 @@
 import * as React from "react"
-import exp from 'constants';
-import { Button } from '../ui/button';
 import { Bell, History, PanelLeft, Sun } from 'lucide-react';
-import './control-bar.scss';
+import './styles/control-bar.scss';
 
 export function ControlBar() {
   return(

@@ -1,13 +1,11 @@
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from '../ui/table'
-import exp from 'constants';
 
 const invoices = [
   {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './sidenav.scss';
+import './styles/sidenav.scss';
 import {
   ChevronDown,
   ChevronRight,

@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.scss';
-import ProfileSelector from './components/profile-selector/profile-selector';
-import Sidenav from './components/sidenav/sidenav';
-import ControlBar from './components/control-bar/control-bar';
-import Map from './components/map/map';
-import RequestsTable from './components/requests-table/requests-table';
+import ProfileSelector from './components/custom/profile-selector';
+import Sidenav from './components/custom/sidenav';
+import ControlBar from './components/custom/control-bar';
+import RequestsTable from './components/custom/requests-table';
+import Map from './components/custom/map';
 
 function App() {
   return (
