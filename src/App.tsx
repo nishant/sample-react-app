@@ -7,6 +7,7 @@ import PendingRequests from './components/custom/pending-requests';
 import Map from './components/custom/map';
 import OfferFilter from './components/custom/offer-filter';
 import OfferHistory from './components/custom/offer-history';
+import ProcessingOrders from './components/custom/processing-orders';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <PendingRequests />
         <OfferFilter />
         <OfferHistory />
+        <ProcessingOrders />
       </div>
     </div>
   );
