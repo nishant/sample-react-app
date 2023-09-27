@@ -3,7 +3,7 @@ import './App.scss';
 import ProfileSelector from './components/custom/profile-selector';
 import Sidenav from './components/custom/sidenav';
 import ControlBar from './components/custom/control-bar';
-import RequestsTable from './components/custom/requests-table';
+import PendingRequests from './components/custom/pending-requests';
 import Map from './components/custom/map';
 import OfferFilter from './components/custom/offer-filter';
 
@@ -17,7 +17,7 @@ function App() {
       <div className="content-container content">
         <ControlBar />
         <Map />
-        <RequestsTable />
+        <PendingRequests />
         <OfferFilter />
       </div>
     </div>

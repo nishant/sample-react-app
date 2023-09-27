@@ -7,7 +7,7 @@ import {
   TableRow,
 } from '../ui/table'
 
-const invoices = [
+const requests = [
   {
     requestNum: '089765',
     quantity: '23',
@@ -22,7 +22,7 @@ const invoices = [
   },
 ]
 
-export function RequestsTable() {
+export function PendingRequests() {
   return (
     <><h1>Pending Outgoing Requests</h1><Table>
       <TableHeader>
@@ -34,12 +34,12 @@ export function RequestsTable() {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {invoices.map((invoice) => (
-          <TableRow className="flex-row" key={invoice.requestNum}>
-            <TableCell>{invoice.requestNum}</TableCell>
-            <TableCell>{invoice.quantity}</TableCell>
-            <TableCell>{invoice.location}</TableCell>
-            <TableCell className="text-right">{invoice.deliveryDate}</TableCell>
+        {requests.map((request) => (
+          <TableRow className="flex-row" key={request.requestNum}>
+            <TableCell>{request.requestNum}</TableCell>
+            <TableCell>{request.quantity}</TableCell>
+            <TableCell>{request.location}</TableCell>
+            <TableCell className="text-right">{request.deliveryDate}</TableCell>
           </TableRow>
         ))}
       </TableBody>
@@ -47,4 +47,4 @@ export function RequestsTable() {
   )
 }
 
-export default RequestsTable;
+export default PendingRequests;
