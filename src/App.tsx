@@ -3,6 +3,7 @@ import './App.scss';
 import ProfileSelector from './components/profile-selector/profile-selector';
 import Sidenav from './components/sidenav/sidenav';
 import ControlBar from './components/control-bar/control-bar';
+import Map from './components/map/map';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       </div>
       <div className="content-container content">
         <ControlBar />
+        <Map />
       </div>
     </div>
   );
