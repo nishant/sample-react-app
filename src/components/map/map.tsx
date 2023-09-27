@@ -1,37 +1,25 @@
-// @ts-nocheck
+// // @ts-nocheck
 import React, { Component } from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import { useEffect, useState } from 'react';
 
-export default class Map extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {locationData: null};
-  }
+export function Map() {
+  const [location, setLocation] = useState<{lat: number, lon: number} | null>(null);
   
-  async componentDidMount() {
-    if (!navigator.geolocation) { alert('Geolocation not supported.'); }
-    
+  useEffect(() => {
+    if (!navigator.geolocation) { alert('Geolocation not supported.'); return; }
     navigator.geolocation.getCurrentPosition(position => {
       if (!!position.coords) {
-        if (!navigator.geolocation) { alert('Geolocation not supported.'); }
-        
-        navigator.geolocation.getCurrentPosition(position => {
-          if (!!position.coords) {
-            this.setState({locationData: {lat: position.coords.latitude, lon: position.coords.longitude}});
-          }
-        });
+        setLocation({lat: position.coords.latitude, lon: position.coords.longitude});
       }
-    });
-  }
+    })
+  }, []);
   
-  render() {
-    const { locationData } = this.state;
-    
-    return locationData
+  return location
       ? <>
         <h4>Operations</h4>
-          <MapContainer className="map" center={[locationData.lat, locationData.lon]} zoom={13} style={{height: '400px', width: '80%'}}>
+          <MapContainer className="map" center={[location.lat, location.lon]} zoom={13} style={{height: '400px', width: '80%'}}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'/>
           </MapContainer>
         </>
@@ -44,5 +32,6 @@ export default class Map extends Component {
           <span className="sr-only">Loading...</span>
         </div>
         </>
-  }
 }
+
+export default Map;
