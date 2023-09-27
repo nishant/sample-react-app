@@ -22,7 +22,7 @@ const orders = [
   },
 ]
 
-export function ProcessingOrders() {
+const ProcessingOrders = () => {
   return (
     <><h1>Orders In Process</h1><Table>
       <TableHeader>
@@ -45,6 +45,6 @@ export function ProcessingOrders() {
       </TableBody>
     </Table></>
   )
-}
+};
 
 export default ProcessingOrders;

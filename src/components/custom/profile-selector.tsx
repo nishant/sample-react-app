@@ -34,9 +34,9 @@ const profiles = [
   }
 ];
 
-export function ProfileSelector() {
-  const [open, setOpen] = React.useState(false)
-  const [value, setValue] = React.useState("")
+const ProfileSelector = () => {
+  const [open, setOpen] = React.useState(false);
+  const [value, setValue] = React.useState("");
   
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -86,6 +86,6 @@ export function ProfileSelector() {
       </PopoverContent>
     </Popover>
   )
-}
+};
 
 export default ProfileSelector;

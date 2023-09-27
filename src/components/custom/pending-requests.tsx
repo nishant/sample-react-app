@@ -22,7 +22,7 @@ const requests = [
   },
 ]
 
-export function PendingRequests() {
+const PendingRequests = () => {
   return (
     <><h1>Pending Outgoing Requests</h1><Table>
       <TableHeader>
@@ -45,6 +45,6 @@ export function PendingRequests() {
       </TableBody>
     </Table></>
   )
-}
+};
 
 export default PendingRequests;

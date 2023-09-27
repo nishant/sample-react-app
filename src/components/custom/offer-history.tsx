@@ -28,7 +28,7 @@ const offers = [
   },
 ]
 
-export function OfferHistory() {
+const OfferHistory = () => {
   return (
     <><h1>Pending Outgoing Requests</h1><Table>
       <TableHeader>
@@ -57,6 +57,6 @@ export function OfferHistory() {
       </TableBody>
     </Table></>
   )
-}
+};
 
 export default OfferHistory;

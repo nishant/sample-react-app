@@ -9,7 +9,7 @@ import OfferFilter from './components/custom/offer-filter';
 import OfferHistory from './components/custom/offer-history';
 import ProcessingOrders from './components/custom/processing-orders';
 
-function App() {
+const App = () => {
   return (
     <div id="page-container">
       <div className="sidenav-container content">
@@ -26,6 +26,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

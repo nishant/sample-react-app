@@ -10,6 +10,7 @@ import {
   ShoppingBag,
   UserSquare,
 } from 'lucide-react';
+
 const TreeNode = ({ node }: any) => {
   const [isExpanded, setIsExpanded] = useState(false);
   
@@ -53,72 +54,71 @@ const Tree = ({ data }: any) => {
   );
 };
 
+const treeData = [
+  {
+    id: 1,
+    name: 'Dashboard',
+    children: [],
+    icon: <PieChart className="icon" />
+  },
+  {
+    id: 2,
+    name: 'History',
+    children: [],
+    icon: <ShoppingBag className="icon" />
+  },
+  {
+    id: 3,
+    name: 'Customers',
+    icon: <UserSquare className="icon" />,
+    children: [
+      {
+        id: 4,
+        name: 'Contracts',
+        children: [],
+        icon: null
+      },
+      {
+        id: 5,
+        name: 'Messaging',
+        children: [],
+        icon: null
+      },
+      {
+        id: 6,
+        name: 'Contacts',
+        children: [],
+        icon: null
+      }
+    ],
+  },
+  {
+    id: 7,
+    name: 'Documents',
+    children: [],
+    icon: <FileStack className="icon" />
+  },
+  {
+    id: 8,
+    name: 'Billing',
+    children: [],
+    icon: <Receipt className="icon" />
+  },
+  {
+    id: 9,
+    name: 'Settings',
+    children: [],
+    icon: <Settings className="icon" />
+  },
+  {
+    id: 10,
+    name: 'Social',
+    children: [],
+    icon: <MessagesSquare className="icon" />
+  },
+];
+
 const Sidenav = () => {
-  const treeData = [
-    {
-      id: 1,
-      name: 'Dashboard',
-      children: [],
-      icon: <PieChart className="icon" />
-    },
-    {
-      id: 2,
-      name: 'History',
-      children: [],
-      icon: <ShoppingBag className="icon" />
-    },
-    {
-      id: 3,
-      name: 'Customers',
-      icon: <UserSquare className="icon" />,
-      children: [
-        {
-          id: 4,
-          name: 'Contracts',
-          children: [],
-          icon: null
-        },
-        {
-          id: 5,
-          name: 'Messaging',
-          children: [],
-          icon: null
-        },
-        {
-          id: 6,
-          name: 'Contacts',
-          children: [],
-          icon: null
-        }
-      ],
-    },
-    {
-      id: 7,
-      name: 'Documents',
-      children: [],
-      icon: <FileStack className="icon" />
-    },
-    {
-      id: 8,
-      name: 'Billing',
-      children: [],
-      icon: <Receipt className="icon" />
-    },
-    {
-      id: 9,
-      name: 'Settings',
-      children: [],
-      icon: <Settings className="icon" />
-    },
-    {
-      id: 10,
-      name: 'Social',
-      children: [],
-      icon: <MessagesSquare className="icon" />
-    },
-    
-  ];
-  
   return (
     <div>
       <Tree data={treeData} />

@@ -3,7 +3,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import './styles/offer-filter.scss'
 import { Input } from '../ui/input';
 import { Button } from '../ui/button';
-export function OfferFilter() {
+
+const OfferFilter = ()  => {
   return (
     <>
       <h1>Create an Offer</h1>
@@ -75,10 +76,8 @@ export function OfferFilter() {
         </div>
       </div>
       <Button>Submit</Button>
-    
-    
     </>
   )
-}
+};
 
 export default OfferFilter;

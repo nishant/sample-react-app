@@ -4,7 +4,7 @@ import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useState } from 'react';
 
-export function Map() {
+const Map = () => {
   const [location, setLocation] = useState<{lat: number, lon: number} | null>(null);
   
   useEffect(() => {
@@ -32,6 +32,6 @@ export function Map() {
           <span className="sr-only">Loading...</span>
         </div>
         </>
-}
+};
 
 export default Map;
