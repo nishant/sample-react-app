@@ -6,6 +6,7 @@ import ControlBar from './components/custom/control-bar';
 import PendingRequests from './components/custom/pending-requests';
 import Map from './components/custom/map';
 import OfferFilter from './components/custom/offer-filter';
+import OfferHistory from './components/custom/offer-history';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Map />
         <PendingRequests />
         <OfferFilter />
+        <OfferHistory />
       </div>
     </div>
   );
