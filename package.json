@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@changey/react-leaflet-markercluster": "^4.0.0-rc1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-dialog": "^1.0.5",
@@ -18,9 +19,13 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "cmdk": "^0.2.0",
+    "leaflet": "^1.9.4",
+    "leaflet.markercluster": "^1.5.3",
     "lucide-react": "^0.279.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
+    "react-leaflet-markercluster": "^3.0.0-rc1",
     "react-scripts": "5.0.1",
     "sass": "^1.68.0",
     "tailwind-merge": "^1.14.0",
@@ -53,6 +58,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-leaflet-markercluster": "^3.0.1",
     "tailwindcss": "^3.3.3"
   }
 }
