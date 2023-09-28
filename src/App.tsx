@@ -8,6 +8,7 @@ import Map from './components/custom/map';
 import OfferFilter from './components/custom/offer-filter';
 import OfferHistory from './components/custom/offer-history';
 import ProcessingOrders from './components/custom/processing-orders';
+import Counter from './components/custom/counter';
 
 const App = () => {
   return (
@@ -17,7 +18,8 @@ const App = () => {
         <Sidenav />
       </div>
       <div className="content-container content">
-        <ControlBar />
+          <Counter />
+          <ControlBar />
         <Map />
         <PendingRequests />
         <OfferFilter />
