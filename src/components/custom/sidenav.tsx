@@ -10,6 +10,7 @@ import {
   ShoppingBag,
   UserSquare,
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const TreeNode = ({ node }: any) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -24,7 +25,7 @@ const TreeNode = ({ node }: any) => {
     <div className="item-container">
       <div className="tree-item" onClick={toggleExpansion}>
         {isExpanded ? <ChevronDown className="reduce-size" /> : <ChevronRight className="reduce-size" />}
-        {node.icon} {node.name}
+        <Link to={node.route}>{node.icon} {node.name}</Link>
       </div>
       {isExpanded && (
         <ul style={{ marginLeft: '20px' }}>
@@ -59,7 +60,8 @@ const treeData = [
     id: 1,
     name: 'Dashboard',
     children: [],
-    icon: <PieChart className="icon" />
+    icon: <PieChart className="icon" />,
+    route: '/dashboard'
   },
   {
     id: 2,
